@@ -93,6 +93,12 @@ i {
     float: right;
     color: red;
 }
+.button_to{
+    float: right;
+    outline: none;
+    border: none;
+    background: none;
+}
 
 .col-md-4 {
     margin-top: 2vmin;
