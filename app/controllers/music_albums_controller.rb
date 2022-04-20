@@ -4,10 +4,15 @@ class MusicAlbumsController < ApplicationController
    def index
     @p = current_user.music_albums.published
     @u = current_user.music_albums.unpublished
+
+    # for published
     @q=@p.ransack(params[:q])
     @p=@q.result.includes(:tags) 
+
+    # for unpublished 
     @q=@u.ransack(params[:q])
     @u=@q.result.includes(:tags) 
+    
    end
  
    def show

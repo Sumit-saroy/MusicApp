@@ -27,7 +27,6 @@ body {
     outline-style: none;
 }
 .button{
-    background: linear-gradient(to left, #7700aa, #8800ff);
     border: none;
     box-shadow: none;
     outline: none;
@@ -93,7 +92,7 @@ i {
     float: right;
     color: red;
 }
-.button_to{
+.buttonto{
     float: right;
     outline: none;
     border: none;
