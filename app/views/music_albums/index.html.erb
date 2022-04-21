@@ -8,7 +8,7 @@
   <h1>Published Music Album
   </h1>
   <div class="row">
-    <% @p.each do |album| %>
+    <% @publish.each do |album| %>
       <div class="col-md-4">
         <div class="card">
           <div class="card-header">
@@ -26,14 +26,12 @@
               <% end %>
             <% end %>
           </div>
-
           <div class="card-footer">
             <span>
               <strong>Name:</strong>
               <%= album.name %>
               <br>
             </span>
-
             <span class="pl">
               <strong>Description:</strong>
               <%= album.description %>
@@ -51,16 +49,14 @@
               <%= album.all_tags %>
             </span>
           </div>
-
         </div>
       </div>
     <% end %>
   </div>
   <h1 class="mt-5">Unpublished Music Album
   </h1>
-
   <div class="row">
-    <% @u.each do |album| %>
+    <% @unpublish.each do |album| %>
       <div class="col-md-4">
         <div class="card">
           <div class="card-header">
@@ -78,7 +74,6 @@
               <% end %>
             <% end %>
           </div>
-
           <div class="card-footer">
             <span>
               <strong>Name:</strong>
@@ -102,14 +97,12 @@
             </span>
           </div>
         </div>
-
         <%= form_with  model: album do |form| %>
           <div class="mt-2">
-            <%= form.label :publish %>
+            <%= form.label :publish,class:"ms-3" %>
             <%= form.check_box :publish %>
           </div>
-          <div><%= form.submit "Publish" , class: "btn btn-danger" %></div>
-
+          <div><%= form.submit "Publish" , class: "btn btn-danger ms-3" %></div>
         <% end %>
       </div>
     <% end %>

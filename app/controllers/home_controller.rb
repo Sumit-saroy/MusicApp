@@ -1,9 +1,6 @@
 class HomeController < ApplicationController
-    def index 
-        @p = MusicAlbum.all
-        @q=@p.ransack(params[:q])
-        @p=@q.result.includes(:tags)
-    
-
-    end
+  def index
+    @q = MusicAlbum.all.ransack(params[:q])
+    @publish = @q.result.includes(:tags)
+  end
 end
