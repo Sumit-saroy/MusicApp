@@ -1,6 +1,7 @@
 <div class="container">
-  <h2 class="mb-3 mt-3">Sign up</h2>
+  <h2 class="mb-3 " style="margin-top:5rem">Sign up</h2>
 
+<div style="margin-bottom:17rem">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -27,8 +28,8 @@
       <%= f.submit "Sign up",class:"btn btn-primary" %>
     </div>
   <% end %>
-
   <%= render "devise/shared/links" %>
+  </div>
   </div>
 
   

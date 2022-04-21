@@ -1,7 +1,8 @@
 <div class="container">
-<h2 class="mb-3 mt-3">Log in</h2>
+<h2 class="mb-3" style="margin-top:5rem">Log in</h2>
 
 
+<div style="margin-bottom:18rem">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field form-group">
     <%= f.label :email%><br />
@@ -26,10 +27,10 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-
 </div>
 
-<div>
+
+</div>
 
 
 
